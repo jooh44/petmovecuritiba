@@ -738,6 +738,15 @@ body {
     opacity: 0.7;
 }
 
+.professional-title {
+    font-size: 11px;
+    font-weight: 400;
+    color: var(--gray-medium);
+    margin-bottom: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
 .professional-name {
     font-size: 14px;
     font-weight: 500;
