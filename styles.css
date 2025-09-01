@@ -732,6 +732,35 @@ body {
     opacity: 0.7;
 }
 
+.professional-info {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.professional-contact {
+    display: inline-block;
+    text-align: center;
+    padding: 15px 25px;
+    background: rgba(193, 13, 18, 0.05);
+    border-radius: 12px;
+    border: 1px solid rgba(193, 13, 18, 0.1);
+}
+
+.professional-name {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--gray-dark);
+    display: block;
+    margin-bottom: 4px;
+}
+
+.professional-crmv {
+    font-size: 13px;
+    color: var(--primary-red);
+    font-weight: 500;
+    opacity: 0.8;
+}
+
 .emergency-cta {
     text-align: center;
     margin-top: 40px;
