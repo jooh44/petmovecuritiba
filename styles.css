@@ -733,32 +733,23 @@ body {
 }
 
 .professional-info {
-    margin-top: 30px;
+    margin-top: 20px;
     text-align: center;
-}
-
-.professional-contact {
-    display: inline-block;
-    text-align: center;
-    padding: 15px 25px;
-    background: rgba(193, 13, 18, 0.05);
-    border-radius: 12px;
-    border: 1px solid rgba(193, 13, 18, 0.1);
+    opacity: 0.7;
 }
 
 .professional-name {
-    font-size: 16px;
-    font-weight: 600;
-    color: var(--gray-dark);
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--gray-medium);
     display: block;
-    margin-bottom: 4px;
+    margin-bottom: 2px;
 }
 
 .professional-crmv {
-    font-size: 13px;
-    color: var(--primary-red);
-    font-weight: 500;
-    opacity: 0.8;
+    font-size: 12px;
+    color: var(--gray-medium);
+    font-weight: 400;
 }
 
 .emergency-cta {
