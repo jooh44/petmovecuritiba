@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de Pixel - Google Ads</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #1a73e8;
+            text-align: center;
+        }
+        .info-box {
+            background: #e3f2fd;
+            border-left: 4px solid #1a73e8;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        .debug-box {
+            background: #f5f5f5;
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+            font-family: monospace;
+            font-size: 12px;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+        .button {
+            background: #1a73e8;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            margin: 10px 5px 10px 0;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: bold;
+        }
+        .button:hover {
+            background: #1557b0;
+        }
+        .button-success {
+            background: #34a853;
+        }
+        .button-success:hover {
+            background: #2d8e47;
+        }
+        .status {
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+        .status.success {
+            background: #c8e6c9;
+            color: #2e7d32;
+        }
+        .status.warning {
+            background: #fff3cd;
+            color: #856404;
+        }
+        .status.error {
+            background: #f8d7da;
+            color: #721c24;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🧪 Teste de Pixel Google Ads</h1>
+        
+        <div class="info-box">
+            <strong>ID da Campanha:</strong> AW-16580528557<br>
+            <strong>ID da Conversão:</strong> _cGQCJmmg7wbEK2Tm-I9<br>
+            <strong>Status:</strong> <span id="status">Verificando...</span>
+        </div>
+
+        <h2>Testes de Funcionamento</h2>
+        
+        <button class="button" onclick="testPixelLoaded()">1. Verificar se Pixel está carregado</button>
+        <button class="button" onclick="testDataLayer()">2. Verificar Data Layer</button>
+        <button class="button" onclick="testGtagFunction()">3. Verificar função gtag</button>
+        <button class="button button-success" onclick="testConversion()">4. Testar Conversão (Enviar para Google)</button>
+        <button class="button" onclick="clearDebug()">Limpar Log</button>
+
+        <h2>Console de Debug</h2>
+        <div class="debug-box" id="debug">
+            <div style="color: #666;">[Aguardando testes...]</div>
+        </div>
+    </div>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16580528557"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'AW-16580528557');
+        gtag('config', 'AW-16580528557/_cGQCJmmg7wbEK2Tm-I9', { 'allow_custom_scripts': true });
+
+        function gtag_report_conversion(url) {
+            var callback = function () {
+                if (typeof(url) != 'undefined') {
+                    window.location = url;
+                }
+            };
+            gtag('event', 'conversion', {
+                'send_to': 'AW-16580528557/_cGQCJmmg7wbEK2Tm-I9',
+                'value': 1.0,
+                'currency': 'BRL',
+                'event_callback': callback
+            });
+            return false;
+        }
+    </script>
+
+    <script>
+        const debugBox = document.getElementById('debug');
+        const statusBox = document.getElementById('status');
+
+        function log(message, type = 'info') {
+            const timestamp = new Date().toLocaleTimeString();
+            const color = type === 'success' ? '#34a853' : type === 'error' ? '#d33427' : '#1a73e8';
+            const line = `<div style="color: ${color}; margin: 5px 0;"><strong>[${timestamp}]</strong> ${message}</div>`;
+            debugBox.innerHTML += line;
+            debugBox.scrollTop = debugBox.scrollHeight;
+        }
+
+        function clearDebug() {
+            debugBox.innerHTML = '';
+            log('Console limpo');
+        }
+
+        function testPixelLoaded() {
+            log('🔍 Teste 1: Verificando se Pixel está carregado...', 'info');
+            
+            const gtagScript = document.querySelector('script[src*="googletagmanager.com/gtag"]');
+            if (gtagScript) {
+                log('✅ Script gtag.js carregado com sucesso', 'success');
+            } else {
+                log('❌ Script gtag.js NÃO foi encontrado', 'error');
+            }
+
+            if (typeof window.gtag === 'function') {
+                log('✅ Função gtag() está disponível', 'success');
+            } else {
+                log('❌ Função gtag() NÃO está disponível', 'error');
+            }
+        }
+
+        function testDataLayer() {
+            log('🔍 Teste 2: Verificando Data Layer...', 'info');
+            
+            if (window.dataLayer) {
+                log(`✅ Data Layer existe com ${window.dataLayer.length} eventos`, 'success');
+                window.dataLayer.forEach((item, index) => {
+                    if (item.event) {
+                        log(`   - Evento ${index}: ${item.event}`, 'info');
+                    }
+                });
+            } else {
+                log('❌ Data Layer NÃO foi encontrado', 'error');
+            }
+        }
+
+        function testGtagFunction() {
+            log('🔍 Teste 3: Verificando função gtag_report_conversion...', 'info');
+            
+            if (typeof window.gtag_report_conversion === 'function') {
+                log('✅ Função gtag_report_conversion() está disponível', 'success');
+            } else {
+                log('❌ Função gtag_report_conversion() NÃO está disponível', 'error');
+            }
+        }
+
+        function testConversion() {
+            log('🧪 Teste 4: Enviando evento de conversão para Google...', 'info');
+            log('⏳ Aguarde... enviando evento', 'info');
+            
+            try {
+                gtag('event', 'conversion', {
+                    'send_to': 'AW-16580528557/_cGQCJmmg7wbEK2Tm-I9',
+                    'value': 1.0,
+                    'currency': 'BRL'
+                });
+                log('✅ Evento de conversão enviado para Google Ads', 'success');
+                log('📌 Verifique o Google Tag Assistant no painel do Google Ads em alguns minutos', 'info');
+                statusBox.innerHTML = '✅ Teste enviado - Aguarde alguns minutos para aparecer no painel';
+                statusBox.style.color = '#34a853';
+            } catch (error) {
+                log(`❌ Erro ao enviar conversão: ${error.message}`, 'error');
+                statusBox.innerHTML = '❌ Erro ao enviar';
+                statusBox.style.color = '#d33427';
+            }
+        }
+
+        // Executar teste inicial ao carregar
+        window.addEventListener('load', function() {
+            setTimeout(() => {
+                log('✅ Página carregada com sucesso', 'success');
+                testPixelLoaded();
+            }, 2000);
+        });
+    </script>
+</body>
+</html>
