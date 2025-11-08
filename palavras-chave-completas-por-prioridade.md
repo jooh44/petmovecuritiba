@@ -24,24 +24,31 @@
 **Conversão:** MUITO ALTA  
 **Razão:** Menos concorrência, alta intenção local, diferencial domiciliar
 
-### 🏠 1A: Localização - Bairros Próximos
-*Pessoas buscando veterinário PERTO delas*
+### 🏠 1A: Localização - Centro de Curitiba (FOCO PRINCIPAL)
+*Pessoas buscando veterinário no Centro - principal ponto de atração*
 
 #### Correspondência Exata
 ```
-[veterinário rebouças curitiba]
 [veterinário centro curitiba]
-[veterinário batel curitiba]
-[veterinário água verde curitiba]
-[veterinário alto da glória curitiba]
-[veterinário cristo rei curitiba]
-[veterinário prado velho curitiba]
 [veterinário rua nunes machado]
 [veterinário próximo de mim curitiba]
-[clínica veterinária rebouças]
-[clínica veterinária batel]
+[veterinário região central curitiba]
+[clínica veterinária centro curitiba]
+[veterinário no centro de curitiba]
+[veterinário nunes machado curitiba]
+[veterinário rebouças curitiba]
+[veterinário batel curitiba]
+[veterinário água verde curitiba]
+[veterinário prado velho curitiba]
 [veterinário mercês curitiba]
 [veterinário cabral curitiba]
+[veterinário próximo ao centro]
+[veterinário zona central curitiba]
+[veterinário avenida central curitiba]
+[veterinário shopping center curitiba]
+[veterinário estação central curitiba]
+[veterinário downtown curitiba]
+[veterinário pé da praça curitiba]
 ```
 
 #### Correspondência de Frase
@@ -49,7 +56,81 @@
 "veterinário perto de mim"
 "veterinário próximo centro curitiba"
 "veterinário região central curitiba"
-"clínica veterinária bairro"
+"clínica veterinária centro"
+"veterinário no centro"
+"veterinário perto do centro"
+"veterinário zona central"
+"veterinário bem localizado curitiba"
+"veterinário acessível curitiba"
+"veterinário fácil acesso"
+"veterinário fácil estacionamento"
+"veterinário próximo rodoviária"
+"veterinário perto da praça"
+"veterinário centro político"
+"veterinário centro comercial"
+```
+
+### 🏠 1A2: Localização - Especificações de Endereço e Referências
+*Pessoas buscando veterinário por pontos de referência do Centro*
+
+#### Correspondência Exata
+```
+[veterinário centro cívico curitiba]
+[veterinário rua das flores curitiba]
+[veterinário rua XV de novembro curitiba]
+[veterinário boca maldita curitiba]
+[veterinário praia de bolas curitiba]
+[veterinário bosque alemão curitiba]
+[veterinário passeio público curitiba]
+[veterinário largo da ordem curitiba]
+[veterinário museu oscar niemeyer curitiba]
+[veterinário rua 24 horas curitiba]
+[veterinário garibaldi curitiba]
+[veterinário trindade curitiba]
+[veterinário campo de santana curitiba]
+[veterinário praça santos andrade curitiba]
+[veterinário pç tiradentes curitiba]
+[veterinário rua sete de setembro curitiba]
+[veterinário avenida marechal floriano curitiba]
+[veterinário estação ferroviária curitiba]
+```
+
+#### Correspondência de Frase
+```
+"veterinário perto de locais famosos"
+"veterinário centro de curitiba"
+"veterinário região de compras"
+"veterinário próximo pontos turísticos"
+"veterinário zona turística"
+"veterinário coração da cidade"
+"veterinário próximo estação"
+"veterinário perto do shopping"
+```
+
+### 🏠 1A3: Localização - Mobilidade e Acessibilidade
+*Pessoas que priorizam facilidade de acesso*
+
+#### Correspondência Exata
+```
+[veterinário com estacionamento curitiba]
+[veterinário fácil acesso curitiba]
+[veterinário fácil estacionamento curitiba]
+[veterinário próximo transporte público]
+[veterinário perto de terminal de ônibus]
+[veterinário próximo rodoviária curitiba]
+[veterinário acessível curitiba]
+[veterinário bem sinalizado curitiba]
+[veterinário fácil encontrar curitiba]
+```
+
+#### Correspondência de Frase
+```
+"veterinário com estacionamento"
+"veterinário fácil acesso"
+"veterinário próximo transporte"
+"veterinário bem localizado"
+"veterinário de fácil encontro"
+"veterinário acessível e próximo"
 ```
 
 ### 🏠 1B: Atendimento Domiciliar - DIFERENCIAL CHAVE
@@ -437,18 +518,18 @@
 
 | Prioridade | Grupo | R$/dia | % | CPC | Cliques/dia |
 |---|---|---|---|---|---|
-| 1 | Localização + Domiciliar | R$ 4,00 | 40% | R$ 0,50 | 8 |
-| 2 | Qualidade/Profissionalismo | R$ 1,50 | 15% | R$ 1,00 | 1,5 |
-| 3 | Microchipagem | R$ 1,00 | 10% | R$ 0,80 | 1,2 |
-| 4 | Emergência | R$ 1,00 | 10% | R$ 2,00 | 0,5 |
-| 5 | Cirurgias | R$ 0,70 | 7% | R$ 1,20 | 0,6 |
-| 6 | Vacinas | R$ 0,80 | 8% | R$ 0,70 | 1,1 |
-| 7 | Long Tail | R$ 1,00 | 10% | R$ 0,45 | 2,2 |
-| 8 | Consultas | R$ 0,80 | 8% | R$ 0,90 | 0,9 |
-| 9 | Farmácia | R$ 0,50 | 5% | R$ 0,60 | 0,8 |
-| 10 | WhatsApp | R$ 0,30 | 3% | R$ 0,70 | 0,4 |
-| 11 | Exames | R$ 0,40 | 4% | R$ 0,70 | 0,6 |
-| | **TOTAL** | **R$ 10,00** | **100%** | **R$ 0,85** | **~18 cliques** |
+| 1 | Localização + Domiciliar | R$ 5,00 | 50% | R$ 0,45 | 11 |
+| 2 | Qualidade/Profissionalismo | R$ 1,20 | 12% | R$ 1,00 | 1,2 |
+| 3 | Microchipagem | R$ 0,80 | 8% | R$ 0,80 | 1 |
+| 4 | Emergência | R$ 0,80 | 8% | R$ 2,00 | 0,4 |
+| 5 | Cirurgias | R$ 0,60 | 6% | R$ 1,20 | 0,5 |
+| 6 | Vacinas | R$ 0,70 | 7% | R$ 0,70 | 1 |
+| 7 | Long Tail | R$ 0,60 | 6% | R$ 0,45 | 1,3 |
+| 8 | Consultas | R$ 0,40 | 4% | R$ 0,90 | 0,4 |
+| 9 | WhatsApp | R$ 0,20 | 2% | R$ 0,70 | 0,3 |
+| 10 | Exames | R$ 0,30 | 3% | R$ 0,70 | 0,4 |
+| 11 | Farmácia | R$ 0,30 | 3% | R$ 0,60 | 0,5 |
+| | **TOTAL** | **R$ 10,00** | **100%** | **R$ 0,80** | **~18 cliques** |
 
 ---
 
@@ -654,13 +735,17 @@ Descrição 2: Dr. Allan Balzer CRMV-PR 24095. Rua Nunes Machado 1093. Agende: (
 - ✅ Estratégia focada em classe média/alta
 - ✅ Combate objeções identificadas
 - ✅ Inclui microchipagem e cirurgias
-- ✅ 105+ palavras-chave prontas
+- ✅ **LOCALIZAÇÃO EXPANDIDA:** 3 sub-grupos (Centro, Referências, Acessibilidade)
+- ✅ **65+ palavras-chave de localização** (foco total no Centro e proximidades)
+- ✅ **150+ palavras-chave prontas** (expansão de 45+ palavras)
 - ✅ 35+ palavras negativas
 - ✅ 5 copys de anúncios
+- ✅ Orçamento realocado: 50% para localização (antes 40%)
 
 ---
 
 **Última atualização:** Novembro 2025  
 **Baseado em:** Briefing oficial PetMove Curitiba  
+**Modificações:** Expansão de palavras-chave de localização (Centro)  
 **Status:** PRONTO PARA IMPLEMENTAR  
 **Próxima revisão:** Após 2 semanas de campanha ativa
